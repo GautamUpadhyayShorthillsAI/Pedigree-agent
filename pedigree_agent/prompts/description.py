@@ -1,0 +1,5 @@
+root_description = "An orchestrator agent that manages pedigree form filling for the proband (patient), their parents, and siblings."
+proband_description = "Collects and structures the proband (patient) information required for the pedigree form."
+parents_description = "Collects and structures the father and mother information required for the pedigree form."
+siblings_description = "Collects and structures the sibling and half-sibling information for the pedigree form."
+grand_parents_description = "Collects and structures the paternal and maternal grandparents' information required for the pedigree form."
