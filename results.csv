@@ -1,2 +1,345 @@
-User,Agent response
-,
+User,Agent response,conversation id
+Hello,"Hello! I'm here to help you fill out the pedigree form. Let's start with the proband, that is, the patient. Could you please tell me the proband's name?",1
+My name is sumit,"""{
+  ""firstName"": ""Sumit"",
+  ""lastName"": null,
+  ""gender"": null,
+  ""age"": null,
+  ""dob"": null,
+  ""isAlive"": null,
+  ""isAdopted"": null
+}
+Thank you, Sumit! I need a little more information to complete the required details. Could you please tell me Sumit's gender and age?""",1
+i am 23 years old male,"""{
+  ""firstName"": ""Sumit"",
+  ""lastName"": null,
+  ""gender"": ""male"",
+  ""age"": ""23"",
+  ""dob"": null,
+  ""isAlive"": null,
+  ""isAdopted"": null
+}
+Great! I have now collected the required information for the proband. We have the first name, gender, and age.
+
+You can either move on to filling the parents' information, or I can help you add extra optional details like last name, date of birth, whether Sumit is alive, or if they were adopted.
+
+What would you like to do next?""",1
+my father's name is naman and mother's name is sunita,"""{
+  ""father"": {
+    ""firstName"": ""Naman"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""mother"": {
+    ""firstName"": ""Sunita"",
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  }
+}
+Okay, I have the first names of your father and mother. Now that I have the required details for both parents, you can either move on to filling the siblings' information, OR add extra optional details (lastName, dob, age, isAlive, additionalInfo). What would you like to do?""",1
+i have 2 siblings,"Okay, I will make a note of that and transfer you to the siblings' information now.",1
+my sister's name is kriti and my brother's name is rohan,"""{
+  ""father"": {
+    ""firstName"": ""Naman"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""mother"": {
+    ""firstName"": ""Sunita"",
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  }
+}""",1
+now add my siblings,"Okay, let's add your siblings. I have your sister Kriti and your brother Rohan. For each sibling, I need their gender, age, and whether they are a half-sibling. Let's start with Kriti. What is Kriti's gender, age, and is she a half-sibling?",1
+both of them are full siblings,"Okay, thank you. So, Kriti and Rohan are both full siblings. Now, could you please provide Kriti's gender and age?",1
+Hello,"Hi there! I'm here to help you fill out the pedigree form. We'll start with some information about the proband, that is, the patient. Let's begin with the proband's details. Would you like to start with their name, age, and gender?",2
+i am sumit 23 years old male,"""{
+  ""firstName"": ""sumit"",
+  ""lastName"": null,
+  ""gender"": ""male"",
+  ""age"": ""23"",
+  ""dob"": null,
+  ""isAlive"": null,
+  ""isAdopted"": null
+}
+Great, I have the proband's first name, age, and gender. The required details are complete. Would you like to move on to filling the parents' information, or would you prefer to add extra optional details like last name, date of birth, etc.?""",2
+my father's name is naman and mother's male is kritika,"""{
+  ""firstName"": ""sumit"",
+  ""lastName"": null,
+  ""gender"": ""male"",
+  ""age"": ""23"",
+  ""dob"": null,
+  ""isAlive"": null,
+  ""isAdopted"": null
+}
+I will transfer you to parents agent to collect your parent's details.
+{
+  ""father"": {
+    ""firstName"": ""naman"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""mother"": {
+    ""firstName"": ""kritika"",
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  }
+}
+Great! I have your father's and mother's first names. Now that the required details for both parents are complete, you can either move on to filling the siblings' information, OR add extra optional details for your parents like their last names, dates of birth, ages, etc. What would you like to do?
+""",2
+i have 2 siblings,"Okay, the required details for the parents are done. You can either move on to filling the siblings' information, OR add extra optional details for your parents like their last names, dates of birth, ages, etc. What would you like to do?",2
+my sister's name is kriti and brother's name is rohan,"""{
+  ""father"": {
+    ""firstName"": ""naman"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""mother"": {
+    ""firstName"": ""kritika"",
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  }
+}
+Okay, I understand. I will now transfer you to the siblings' information section.
+Okay, let's start with your siblings. Please provide the following details for each sibling: first name, sex (M or F), age, and relationship (Brother or Sister).
+
+Starting with Kriti, can you please provide her sex, age, and relationship to you?
+""",2
+"female and sister, 22 years old","Okay, great. Now, for Rohan, can you please provide his sex, age, and relationship to you?",2
+brohter male 12,"""{
+  ""full sibling"": {
+    ""sibling1"": {
+      ""firstName"": ""kriti"",
+      ""lastName"": null,
+      ""sex"": ""F"",
+      ""age"": ""22"",
+      ""relationship"": ""Sister"",
+      ""isAlive"": null,
+      ""additionalInfo"": null
+    },
+    ""sibling2"": {
+      ""firstName"": ""rohan"",
+      ""lastName"": null,
+      ""sex"": ""M"",
+      ""age"": ""12"",
+      ""relationship"": ""Brother"",
+      ""isAlive"": null,
+      ""additionalInfo"": null
+    }
+  },
+  ""half sibling"": {}
+}
+The required details for your siblings Kriti and Rohan are complete.
+Now, would you like to move on to filling the grandparents' information, or would you prefer to add extra optional details for your siblings (like last name, isAlive, additionalInfo)?""",2
+my grand father's name is ishan,"Okay, I understand you'd like to move on to the grandparents' information.",2
+yes,"""{
+  ""full sibling"": {
+    ""sibling1"": {
+      ""firstName"": ""kriti"",
+      ""lastName"": null,
+      ""sex"": ""F"",
+      ""age"": ""22"",
+      ""relationship"": ""Sister"",
+      ""isAlive"": null,
+      ""additionalInfo"": null
+    },
+    ""sibling2"": {
+      ""firstName"": ""rohan"",
+      ""lastName"": null,
+      ""sex"": ""M"",
+      ""age"": ""12"",
+      ""relationship"": ""Brother"",
+      ""isAlive"": null,
+      ""additionalInfo"": null
+    }
+  },
+  ""half sibling"": {}
+}
+Okay, I will transfer you to the grandparents' information section.""",2
+my grand father's name is ishan,"""{
+  ""full sibling"": {
+    ""sibling1"": {
+      ""firstName"": ""kriti"",
+      ""lastName"": null,
+      ""sex"": ""F"",
+      ""age"": ""22"",
+      ""relationship"": ""Sister"",
+      ""isAlive"": null,
+      ""additionalInfo"": null
+    },
+    ""sibling2"": {
+      ""firstName"": ""rohan"",
+      ""lastName"": null,
+      ""sex"": ""M"",
+      ""age"": ""12"",
+      ""relationship"": ""Brother"",
+      ""isAlive"": null,
+      ""additionalInfo"": null
+    }
+  },
+  ""half sibling"": {}
+}
+I understand. I will transfer you to the grandparents' section.
+{
+  ""paternalGrandfather"": {
+    ""firstName"": null,
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""paternalGrandmother"": {
+    ""firstName"": null,
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""maternalGrandfather"": {
+    ""firstName"": ""ishan"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""maternalGrandmother"": {
+    ""firstName"": null,
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  }
+}
+Okay, I have the maternal grandfather's first name. Could you please provide the first names for the paternal grandfather, paternal grandmother, and maternal grandmother?
+""",2
+ishan is my paternal grand father,"""{
+  ""paternalGrandfather"": {
+    ""firstName"": ""ishan"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""paternalGrandmother"": {
+    ""firstName"": null,
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""maternalGrandfather"": {
+    ""firstName"": null,
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""maternalGrandmother"": {
+    ""firstName"": null,
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  }
+}
+Thanks! Now I have the paternal grandfather's first name. Could you please provide the first names for the paternal grandmother, maternal grandfather, and maternal grandmother?""",2
+"sushila , ashok and kamla respectively","""{
+  ""paternalGrandfather"": {
+    ""firstName"": ""ishan"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""paternalGrandmother"": {
+    ""firstName"": ""sushila"",
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""maternalGrandfather"": {
+    ""firstName"": ""ashok"",
+    ""lastName"": null,
+    ""sex"": ""M"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  },
+  ""maternalGrandmother"": {
+    ""firstName"": ""kamla"",
+    ""lastName"": null,
+    ""sex"": ""F"",
+    ""age"": null,
+    ""dob"": null,
+    ""isAlive"": null,
+    ""additionalInfo"": null
+  }
+}
+Great! I have collected all the required details (first names) for all four grandparents. You can either confirm the completion of the grandparents' details OR add extra optional details for any of the grandparents like their last names, ages, dates of birth, etc. What would you like to do?""",2
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
