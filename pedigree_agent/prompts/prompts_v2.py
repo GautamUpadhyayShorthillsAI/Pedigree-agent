@@ -284,4 +284,3 @@ grand_parents_instruction=(
 
     "Tone: Always be polite, supportive, and guide the user step-by-step."
     )
-
