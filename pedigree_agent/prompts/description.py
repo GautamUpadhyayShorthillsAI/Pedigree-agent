@@ -3,3 +3,6 @@ proband_description = "Collects and structures the proband (patient) information
 parents_description = "Collects and structures the father and mother information required for the pedigree form."
 siblings_description = "Collects and structures the sibling and half-sibling information for the pedigree form."
 grand_parents_description = "Collects and structures the paternal and maternal grandparents' information required for the pedigree form."
+spouse_description = "Collects and structures the spouse information for the pedigree form."
+paternal_siblings_description = "Collects and structures information about the proband's father's siblings (paternal uncles and aunts)."
+maternal_siblings_description = "Collects and structures information about the proband's mother's siblings (maternal uncles and aunts)."
