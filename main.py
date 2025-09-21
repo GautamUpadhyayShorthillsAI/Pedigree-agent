@@ -13,25 +13,29 @@ load_dotenv()
 
 session_service = InMemorySessionService()
 
-# # ===== PART 2: Define Initial State =====
-# # This will be used when creating a new session
-# initial_state = {
-#     "user_name": "Brandon Hancock",
-#     "purchased_courses": [],
-#     "interaction_history": [],
-# }
+# ===== PART 2: Define Initial State =====
+# This will be used when creating a new session
+initial_state = {
+    "proband": {},
+    "parents": {},
+    "siblings": [],
+    "grand_parents": {},
+    "spouse": {},
+    "paternal_siblings": [],
+    "maternal_siblings": [],
+    "interaction_history": [],
+}
 
 
 async def main_async():
     # Setup constants
-    APP_NAME = "Pedigree Agent"
+    APP_NAME = "pedigree_agent"
     USER_ID = "user_01"
 
     # ===== PART 3: Session Creation =====
     # Create a new session with initial state
-    new_session = await session_service.create_session(
-        app_name=APP_NAME,
-        user_id=USER_ID,
+    new_session = session_service.create_session(
+        app_name=APP_NAME, user_id=USER_ID, state=initial_state
     )
     SESSION_ID = new_session.id
     print(f"Created new session: {SESSION_ID}")
