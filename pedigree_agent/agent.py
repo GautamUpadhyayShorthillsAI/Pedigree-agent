@@ -3,15 +3,29 @@ from .sub_agents.parents.agent import parents_agent
 from .sub_agents.proband.agent import proband_agent
 from .sub_agents.siblings.agent import siblings_agent
 from .sub_agents.grand_parents.agent import grand_parents_agent
+from .sub_agents.spouse.agent import spouse_agent
+from .sub_agents.paternal_siblings.agent import paternal_siblings_agent
+from .sub_agents.maternal_siblings.agent import maternal_siblings_agent
 from .prompts.prompts_v2 import root_instruction
 from .prompts.description import root_description
+from .tools.age_calculator import age_calculator_tool
+from .tools.gender_guesser import gender_guesser_tool
 
 root_agent = Agent(
     name="pedigree_agent",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-pro",
     description=root_description,
     instruction=root_instruction,
-    sub_agents=[parents_agent, proband_agent, siblings_agent, grand_parents_agent],
+    sub_agents=[
+        parents_agent,
+        proband_agent,
+        siblings_agent,
+        grand_parents_agent,
+        spouse_agent,
+        paternal_siblings_agent,
+        maternal_siblings_agent,
+    ],
+    tools=[age_calculator_tool, gender_guesser_tool],
 )
 
 
