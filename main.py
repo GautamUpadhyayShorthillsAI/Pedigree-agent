@@ -17,13 +17,12 @@ APP_NAME = "Pedigree Agent"
 async def main_async(query:str):
     # Setup constants
     USER_ID = "user_001"
-
     # ===== PART 3: Session Management - Find or Create =====
     # Check for existing sessions for this user
     existing_sessions = session_service.list_sessions(
         app_name=APP_NAME,
         user_id=USER_ID,
-    )
+    )   
     print(existing_sessions)
     # If there's an existing session, use it, otherwise create a new one
     if existing_sessions and len(existing_sessions.sessions) > 0:

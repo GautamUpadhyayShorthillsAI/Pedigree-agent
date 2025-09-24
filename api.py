@@ -25,12 +25,8 @@ class TextInput(BaseModel):
 
 @app.post("/process")
 async def process_text(input_data: TextInput, request: Request):
-    # Access request details
-    client_host = request.client.host
-    headers = request.headers
-    method = request.method
-    url = str(request.url)
     agent_response = await main_async(input_data.text)
+    
     return {
         "agent_response":agent_response
     }
