@@ -6,7 +6,7 @@ from ...tools.gender_guesser import gender_guesser_tool
 
 spouse_agent = Agent(
     name="spouse_agent",
-    model="gemini-2.5-pro",
+    model="gemini-2.0-flash",
     description=spouse_description,
     instruction=spouse_instruction,
     tools=[age_calculator_tool, gender_guesser_tool],

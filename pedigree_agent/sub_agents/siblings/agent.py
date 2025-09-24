@@ -6,7 +6,7 @@ from ...tools.gender_guesser import gender_guesser_tool
 
 siblings_agent = Agent(
     name="siblings_agent",
-    model="gemini-2.5-pro",
+    model="gemini-2.0-flash",
     description=siblings_description,
     instruction=siblings_instruction,
     tools=[age_calculator_tool, gender_guesser_tool],

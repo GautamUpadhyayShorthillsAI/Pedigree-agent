@@ -13,7 +13,7 @@ from .tools.gender_guesser import gender_guesser_tool
 
 root_agent = Agent(
     name="pedigree_agent",
-    model="gemini-2.5-pro",
+    model="gemini-2.0-flash",
     description=root_description,
     instruction=root_instruction,
     sub_agents=[
